@@ -1,0 +1,72 @@
+/* CUSTOM CODE */
+if(/^(|http|https)\:\/\/sam\.factoryoutletstore\.com\/ShoppingCart\/ShoppingCart\.aspx($|\?.*)/.test(document.URL)) {
+    //Avoid multiple setIntervals getting started.
+    if (window.vwoInterval1587572244690) {
+        clearInterval(window.vwoInterval1587572244690);
+    }
+    window.vwoInterval1587572244690 = setInterval(function() {
+        if (vwo_$('.LPMbutton').length) {
+            console.log('Chat initiated2');
+            
+            //vwo_$(".LPMimage").vwoCss({"display":"none !important"});
+            vwo_$(".LPMlightbox").vwoCss({"display":"none !important"});
+            vwo_$(".LPMcontainer").vwoCss({"display":"none !important"});
+
+    //        $("body").append('<div class="hover_bkgr_fricc"><span class="helper"></span><div class="hover_bkgr_fricc_inner"><div class="popupCloseButton">X</div><div class="pop-txt">Have any questions? <br> Need help with pricing?<div class="pop-txt-prod"></div> <div class="pop-txt-off"></div></div><div class="cta_btn">Click to Chat</div></div></div>');
+            $("body").append('<div class="hover_bkgr_fricc"><span class="helper"></span><div class="hover_bkgr_fricc_inner"><div class="popupCloseButton">X</div><div class="cta_btn">Chat Now</div></div></div>');
+
+            //SHOW POPUP ON SHOPPING CART
+                    if ((localStorage.getItem("popupShowed") == null)){
+                        //exit intent
+                        function addEvent(obj, evt, fn) {
+                            if (obj.addEventListener) {
+                                obj.addEventListener(evt, fn, false);
+                            }
+                            else if (obj.attachEvent) {
+                                obj.attachEvent("on" + evt, fn);
+                            }
+                        }
+                        addEvent(document, 'mouseout', function(evt) {
+                            if (evt.toElement == null && evt.relatedTarget == null ) {
+                                if (localStorage.getItem("popupShowed") != 'true')
+                                {
+                                if (vwo_$('.LPMbutton').length) {
+                                        $('.hover_bkgr_fricc').show();
+                                        var popupShowed = localStorage.setItem("popupShowed", true);          
+                                    }
+                                }
+                            };
+                        });
+                        $('.chat_cta').click(function() {
+                            //$('.LPMimage').click(); //LPMimage is replaced with LPMbutton                
+                            $('.LPMimage').click();
+                        });
+
+                        $(".cta_btn").click(function(){
+                            $('.hover_bkgr_fricc').hide();
+                        });
+                        $(".trigger_popup_fricc").click(function(){
+                        // $('.hover_bkgr_fricc').show();       
+                        });
+                        $('.hover_bkgr_fricc').click(function(){
+                            $('.hover_bkgr_fricc').hide();
+                        });
+                        $('.popupCloseButton').click(function(){
+                            $('.hover_bkgr_fricc').hide();
+                        });
+                    }
+                    else {
+                        $('.hover_bkgr_fricc').hide();
+                    }
+            
+
+            //Remvoe Local Stroage 
+            var urlConfirmatinURLString = window.location.href.indexOf("Confirmation.aspx");
+                if( urlConfirmatinURLString > -1) { 
+                localStorage.removeItem('popupShowed');
+            }
+
+            clearInterval(window.vwoInterval1587572244690);
+        }
+    }, 1000);
+ }
