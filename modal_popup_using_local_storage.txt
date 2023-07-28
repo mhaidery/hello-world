@@ -70,3 +70,46 @@ if(/^(|http|https)\:\/\/sam\.factoryoutletstore\.com\/ShoppingCart\/ShoppingCart
         }
     }, 1000);
  }
+
+
+
+
+.hover_bkgr_fricc{background:rgba(0,0,0,.4);cursor:pointer;display:none;height:100%;position:fixed;text-align:center;top:0;width:100%; z-index:9999;}
+.hover_bkgr_fricc .helper{display:inline-block;height:100%;vertical-align:middle; z-index: 1000;}
+.hover_bkgr_fricc_inner {background-color: transparent;/* box-shadow: 10px 10px 60px #555; */display: inline-block;max-width: 445px;min-height: 310px;vertical-align: middle;width: 60%;position: relative;border-radius: 8px;background-image: url(https://g.factoryoutletstore.com/content/images/fos/abt/all/need_help_popup.png);height: 310px;z-index: 10000;background-repeat: no-repeat;}
+.popupCloseButton {
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -1px;
+    right: -2px;
+    font-size: 20px;
+    line-height: 30px;
+    width: 30px;
+    text-transform: lowercase;
+}
+.popupCloseButton:hover {color: #ccc;}
+.cta_btn {
+    width: 154px;
+    text-align: center;
+    background-color: #004c8d;
+    margin-left: 16px;
+    height: auto;
+    margin-top: 251px;
+    padding: 10px 2px;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: #FFF;
+    border: 1px #FFF dashed;
+}
+.pop-txt {font-size: 35px;font-family: arial;margin: 123px 0 8px 46px;width: 483px;height: 109px;/* border-bottom: 1px #CCC dashed; */padding-bottom: 0;line-height: 35px;color: #FFF;font-weight: normal;line-height: 49px;}
+.pop-txt-prod {display: inline-block;font-weight: bold;font-style: italic;}
+.pop-txt-off { display: inline-block; color: green}
+/*#LPMimage-1625672339113-14 {display: none !important;}*/
+/*.LPMlightbox {display: none !important;}*/
+/*.LPMimage {display: none !important;}*/
+/*.LPMcontainer {display: none !important;}*/
