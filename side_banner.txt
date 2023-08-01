@@ -1,0 +1,37 @@
+@media screen and (max-width: 1280px){
+	.garmin_fenix2{display: none;}
+}
+#garmin_fenix_append_ab2 { float:right;}
+.garmin_fenix2 {
+    width: 215px;
+    padding: 3px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    position: fixed;
+    top: 25%;
+    margin-left: 4px;
+}
+
+
+
+
+/* CUSTOM CODE */
+//Avoid multiple setIntervals getting started.
+if (window.vwoInterval1647878943429) {
+	clearInterval(window.vwoInterval1647878943429);
+}
+window.vwoInterval1647878943429 = setInterval(function() {
+	if (vwo_$('.utmtsplitbnr2').length) {
+
+		if ($('.garmin_fenix_append_ab2').length == 0){
+			$('.root_table').append('<div id="garmin_fenix_append_ab2"><div class="garmin_fenix2"><div><img src="/content/images/fos/abt/all/uvc_light_cleansing_side2.png?v=8" /></div></div></div>');
+			//$("#garmin_fenix_append_ab2").load("/content/images/fos/garmin/banners/garmin-fenix2.txt?v=11");
+			$('<div class="hd_banner"><img class="res-img" src="/content/images/fos/abt/all/uvc_light_cleansing_top2.jpg?v=8"></div').insertAfter('.utmtsplitbnr2')
+		}
+		clearInterval(window.vwoInterval1647878943429);
+	}
+}, 1000);
+/* VISIBILITY */
+vwo_$(".sumome-react-wysiwyg-popup-container > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2)").vwoCss({"visibility":"hidden !important"});
+/* VISIBILITY */
+vwo_$(".sumome-react-wysiwyg-popup-container").vwoCss({"visibility":"hidden !important"});
