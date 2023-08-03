@@ -1,0 +1,56 @@
+
+</script>
+
+
+<input type="text" id="searchInput" placeholder="Search for a country...">
+<div id="countryList"></div>
+
+<script>
+     $(document).ready(function () {
+    const countries = [
+        { name: "Argentina", link: "argentina.html" },
+        { name: "Brazil", link: "brazil.html" },
+        { name: "Canada", link: "canada.html" },
+        { name: "Denmark", link: "denmark.html" },
+        { name: "Egypt", link: "egypt.html" },
+        { name: "France", link: "france.html" },
+        { name: "Germany", link: "germany.html" },
+        { name: "India", link: "india.html" },
+        { name: "Japan", link: "japan.html" },
+        { name: "Korea", link: "korea.html" }
+    ];
+
+    function displayCountries(filter = "") {
+        const countryList = $("#countryList");
+        countryList.empty();
+
+        const filteredCountries = countries.filter(country =>
+            country.name.toLowerCase().includes(filter.toLowerCase())
+        );
+
+        const countriesByFirstLetter = {};
+        filteredCountries.forEach(country => {
+            const firstLetter = country.name.charAt(0).toUpperCase();
+            if (!countriesByFirstLetter[firstLetter]) {
+                countriesByFirstLetter[firstLetter] = [];
+            }
+            countriesByFirstLetter[firstLetter].push(country);
+        });
+
+        Object.keys(countriesByFirstLetter).sort().forEach(firstLetter => {
+            const countriesUnderLetter = countriesByFirstLetter[firstLetter];
+            const countriesGroup = $("<div>").html(`<div class="country_lbl">${firstLetter}</div><ul class="country_ul">${countriesUnderLetter.map(country => `<li><a href="${country.link}">${country.name}</a></li>`).join("")}</ul>`);
+            countryList.append(countriesGroup);
+        });
+    }
+
+    $("#showButton").click(function () {
+        displayCountries();
+        $(".country-list-container").css("display", "block");
+    });
+
+    $("#searchInput").on("input", function () {
+        displayCountries($(this).val());
+    });
+});
+</script>
