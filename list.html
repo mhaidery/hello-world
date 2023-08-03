@@ -1,0 +1,67 @@
+
+    <style>
+
+
+#searchInput {padding: 5px;width: 200px;}
+.country_ul {list-style-type: none;padding: 0;margin: 0;}
+.country_lbl {background-color: #e1f5ff;font-size: 11px;font-weight: bold;margin-top: 14px;padding: 4px 1px;}
+ul.country_ul li a {color: #000;text-decoration: none;font-size: 13px;}
+.country-list-container {display: none;border: 1px solid #ccc;padding: 10px;margin-top: 10px;width: 200px;font-family: arial;}
+    </style>
+
+    <button id="showButton">Show List of Countries</button>
+    <div class="country-list-container">
+        <input type="text" id="searchInput" placeholder="Search for a country...">
+        <div id="countryList"></div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+    const countries = [
+        { name: "Argentina", link: "argentina.html" },
+        { name: "Brazil", link: "brazil.html" },
+        { name: "Canada", link: "canada.html" },
+        { name: "Denmark", link: "denmark.html" },
+        { name: "Egypt", link: "egypt.html" },
+        { name: "France", link: "france.html" },
+        { name: "Germany", link: "germany.html" },
+        { name: "India", link: "india.html" },
+        { name: "Japan", link: "japan.html" },
+        { name: "Korea", link: "korea.html" }
+    ];
+
+    function displayCountries(filter = "") {
+        const countryList = $("#countryList");
+        countryList.empty();
+
+        const filteredCountries = countries.filter(country =>
+            country.name.toLowerCase().includes(filter.toLowerCase())
+        );
+
+        const countriesByFirstLetter = {};
+        filteredCountries.forEach(country => {
+            const firstLetter = country.name.charAt(0).toUpperCase();
+            if (!countriesByFirstLetter[firstLetter]) {
+                countriesByFirstLetter[firstLetter] = [];
+            }
+            countriesByFirstLetter[firstLetter].push(country);
+        });
+
+        Object.keys(countriesByFirstLetter).sort().forEach(firstLetter => {
+            const countriesUnderLetter = countriesByFirstLetter[firstLetter];
+            const countriesGroup = $("<div>").html(`<div class="country_lbl">${firstLetter}</div><ul class="country_ul">${countriesUnderLetter.map(country => `<li><a href="${country.link}">${country.name}</a></li>`).join("")}</ul>`);
+            countryList.append(countriesGroup);
+        });
+    }
+
+    $("#showButton").click(function () {
+        displayCountries();
+        $(".country-list-container").css("display", "block");
+    });
+
+    $("#searchInput").on("input", function () {
+        displayCountries($(this).val());
+    });
+});
+
+    </script>

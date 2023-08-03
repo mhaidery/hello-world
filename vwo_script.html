@@ -1,0 +1,25 @@
+<script>
+
+    /* CUSTOM CODE */
+vwo_$(function(){
+        if($('.page-content').length == 0){
+            $('<button id="showButton">Show List of Countries</button>').insertAfter('.page-content_selectBox');
+            $('<div class="country-list-container"></div>').insertAfter('.page-content');
+            $(".country-list-container").load("https://g.factoryoutletstore.com/content/images/fos/abt/all/test_Code.txt");
+        }
+    });
+
+
+
+    /* CUSTOM CODE */
+//Avoid multiple setIntervals getting started.
+if (window.vwoInterval1690436817326) {
+	clearInterval(window.vwoInterval1690436817326);
+}
+window.vwoInterval1690436817326 = setInterval(function() {
+  debugger;
+	if (vwo_$('#bubble-preview-wrapper').length) {
+		vwo_$('#bubble-preview-wrapper').vwoCss({"display":"none !important"});
+		clearInterval(window.vwoInterval1690436817326);
+	}
+}, 10);
