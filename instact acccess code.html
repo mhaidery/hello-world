@@ -1,0 +1,148 @@
+<script>
+
+
+    
+
+
+/* CUSTOM CODE */
+vwo_$(function(){
+         
+    const paymentBadge = document.querySelector('.payment-discount-badge');
+    const instantAccess = document.querySelector('.instant-access');
+    const buyNowButton = document.getElementById('clicked-on-buy-now');
+
+    if (paymentBadge && instantAccess && paymentBadge.textContent.trim() === 'UPTO 20% OFF' && instantAccess.textContent.trim() === 'INSTANT ACCESS') {
+        
+        const newDiv = document.createElement('div');
+        newDiv.setAttribute('id', 'newLlb');
+        newDiv.textContent = 'Upto 20% OFF and Instant access';
+
+        buyNowButton.parentNode.insertBefore(newDiv, buyNowButton);
+    }
+
+    else if (paymentBadge && instantAccess && paymentBadge.textContent.trim() === '' && instantAccess.textContent.trim() === 'INSTANT ACCESS') {
+        
+        const newDiv = document.createElement('div');
+        newDiv.setAttribute('id', 'newLlb');
+        newDiv.textContent = 'Upto 20% OFF';
+
+        buyNowButton.parentNode.insertBefore(newDiv, buyNowButton);
+    }
+    else if  (paymentBadge && instantAccess && paymentBadge.textContent.trim() === 'UPTO 20% OFF' && instantAccess.textContent.trim() === '') {
+        
+        const newDiv = document.createElement('div');
+        newDiv.setAttribute('id', 'newLlb');
+        newDiv.textContent = 'Instant access';
+
+        buyNowButton.parentNode.insertBefore(newDiv, buyNowButton);
+    }
+
+
+});
+
+/* EDITELEMENT */
+vwo_$("#clicked-on-buy-now").vwoCss({"color":"#37a8c6","border":"2px #37a8c6 solid","font-size":"20px","background-color":"#FFF","background-repeat":"no-repeat","background-position":"95px 10px","box-shadow":"4px 6px 8px #d9d4d4"});
+//Avoid multiple setIntervals getting started.
+/* REMOVE */
+vwo_$(".payment-discount-badge").vwoCss({"display":"none !important"});
+/* REMOVE */
+vwo_$(".instant-access").vwoCss({"display":"none !important"});
+
+
+
+
+
+
+
+
+if (window.vwoInterval1691742006845) {
+	clearInterval(window.vwoInterval1691742006845);
+}
+window.vwoInterval1691742006845 = setInterval(function() {
+	if (vwo_$('.buy-now-top-btns').length == 1) {
+		
+        
+        const paymentBadge = document.querySelector('.payment-discount-badge');
+        const instantAccess = document.querySelector('.instant-access');
+        const buyNowButton = document.getElementById('clicked-on-buy-now');
+
+        if (paymentBadge && instantAccess && paymentBadge.textContent.trim() === 'UPTO 20% OFF' && instantAccess.textContent.trim() === 'INSTANT ACCESS') {
+            
+            const newDiv = document.createElement('div');
+            newDiv.setAttribute('id', 'newLlb');
+            newDiv.textContent = 'Upto 20% OFF and Instant access';
+
+            buyNowButton.parentNode.insertBefore(newDiv, buyNowButton);
+        }
+
+        else if (paymentBadge && instantAccess && paymentBadge.textContent.trim() === '' && instantAccess.textContent.trim() === 'INSTANT ACCESS') {
+            
+            const newDiv = document.createElement('div');
+            newDiv.setAttribute('id', 'newLlb');
+            newDiv.textContent = 'INSTANT ACCESS';
+
+            buyNowButton.parentNode.insertBefore(newDiv, buyNowButton);
+        }
+        else if  (paymentBadge && instantAccess && paymentBadge.textContent.trim() === 'UPTO 20% OFF' && instantAccess.textContent.trim() === '') {
+            
+            const newDiv = document.createElement('div');
+            newDiv.setAttribute('id', 'newLlb');
+            newDiv.textContent = 'UPTO 20% OFF';
+
+            buyNowButton.parentNode.insertBefore(newDiv, buyNowButton);
+        }
+
+		clearInterval(window.vwoInterval1691742006845);
+	}
+}, 100);
+
+
+
+if (window.vwoInterval1691742006845) {
+	clearInterval(window.vwoInterval1691742006845);
+}
+window.vwoInterval1691742006845 = setInterval(function() {
+	if (vwo_$('.buy-now-top-btns').length == 1) {
+		
+        
+        const paymentBadge = document.querySelector('.payment-discount-badge');
+        const instantAccess = document.querySelector('.instant-access');
+        const buyNowButton = document.getElementById('clicked-on-buy-now');
+        const computedStyles = window.getComputedStyle(paymentBadge);
+        const displayValue = computedStyles.getPropertyValue('display');
+
+        if ( displayValue === 'block' && instantAccess.textContent.trim() === 'INSTANT ACCESS') {
+            
+            const newDiv = document.createElement('div');
+            newDiv.setAttribute('id', 'newLlb');
+            newDiv.textContent = 'Upto 20% OFF and Instant access';
+
+            buyNowButton.parentNode.insertBefore(newDiv, buyNowButton);
+        }
+
+        else if ( displayValue === 'none' && instantAccess.textContent.trim() === 'INSTANT ACCESS') {
+            
+            const newDiv = document.createElement('div');
+            newDiv.setAttribute('id', 'newLlb');
+            newDiv.textContent = 'INSTANT ACCESS';
+
+            buyNowButton.parentNode.insertBefore(newDiv, buyNowButton);
+        }
+        else if  ( displayValue === 'block' && instantAccess.textContent.trim() === '') {
+            
+            const newDiv = document.createElement('div');
+            newDiv.setAttribute('id', 'newLlb');
+            newDiv.textContent = 'UPTO 20% OFF';
+
+            buyNowButton.parentNode.insertBefore(newDiv, buyNowButton);
+        }
+
+		clearInterval(window.vwoInterval1691742006845);
+	}
+}, 100);
+
+</script>
+
+
+https://www.mordorintelligence.com/industry-reports/fiber-reinforced-plastic-frp-recycling-market
+https://www.mordorintelligence.com/industry-reports/europe-e-bike-market
