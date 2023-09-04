@@ -1,0 +1,9 @@
+#gamibling-select { display: none !important;}
+.country-list-container {display: none;position: absolute;border: 1px #ccc solid;padding: 10px;top: 18px;background-color: #fff;border-radius: 5px;width: 201px;height: auto;right: -209px; left: 101%;}
+ul.country_ul li {list-style: none;margin: 0;padding: 0;}
+input#searchInput {font-size: 17px;padding: 0px 2px;font-weight: bold; display: none;}
+.country_lbl {background: #f6feff;margin: 2px;padding: 0px;font-size: 13px;font-weight: bold;font-family: arial;border-bottom: 1px #d5eefd solid; display: none;}
+button#showButton {width: 140px;background-color: #43c6cd;border: 1px #2f94c1 solid;color: #fff;border-radius: 5px;float: right;margin-left: 0;}
+.close_btn_right_vwo {float: right;position: relative;top: 0px;left: 5px;background-color: #e9f3f8;text-align: center;/* border-radius: 27px; */font-size: 15px;width: 26px;font-weight: bold;cursor: pointer;font-family: 'regular_bold';}
+.view-global-text {width: 125px;font-size: 14px;text-decoration: underline;color: #13a7cd; visibility: hidden;}
+#component-heading-1 {margin: 10px 0;width: 67%;color: #0e7db3;float: left;padding-right: 30px;text-align: left;}
