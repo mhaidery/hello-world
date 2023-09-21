@@ -4,3 +4,28 @@ https://mordorintelligence1-my.sharepoint.com/:x:/g/personal/mohammad_zulqarnain
 
 
  $("p.label:contains('名前')").text("名前名前");
+
+
+// Check if ".last_name" element is present within ".customize-form"
+const customizeForm = $('.customize-form');
+const lastNameElement = customizeForm.find('.last_name');
+
+// Check if ".last_name" element is not present
+if (!lastNameElement.length) {
+  // Create the HTML code to be inserted
+  const nameHtml = `
+    <p class="label">Name</p>
+    <div class="last_name">
+      <input type="text" class="form-control fname_input" id="ds_fname" autocomplete="on">
+    </div>
+  `;
+
+  // Find the ".email" element
+  const emailElement = customizeForm.find('.email');
+
+  // Create a temporary container element
+  const tempContainer = $('<div></div>').html(nameHtml);
+
+  // Insert the name HTML code above the ".email" element
+  tempContainer.insertBefore(emailElement);
+}
