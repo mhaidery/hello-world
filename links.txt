@@ -29,3 +29,4 @@ if (!lastNameElement.length) {
   // Insert the name HTML code above the ".email" element
   tempContainer.insertBefore(emailElement);
 }
+if(/^(http|https)\:\/\/lr\.factoryoutletstore\.com\/ShoppingCart\/ShoppingCart\.aspx.*/.test(document.URL)){
