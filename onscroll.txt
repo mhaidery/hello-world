@@ -1,0 +1,29 @@
+// Function to insert or remove the new div based on scroll position
+function handleScroll() {
+    const siteHeaderWrapper = document.querySelector('.site-header-wrapper');
+    const breadcrumb = document.querySelector('.row.breadcrumb.text-center');
+    const newDiv = document.querySelector('.new_div');
+
+    // Get the position of the breadcrumb element
+    const breadcrumbRect = breadcrumb.getBoundingClientRect();
+
+    if (breadcrumbRect.top <= 0) {
+        // Breadcrumb is at the top or above the viewport
+        if (!newDiv) {
+            // Create and insert the new div if it doesn't exist
+            const div = document.createElement('div');
+            div.className = 'new_div';
+            div.textContent = 'New Div Content'; // Change this as needed
+            siteHeaderWrapper.appendChild(div);
+        }
+    } else {
+        // Breadcrumb is below the viewport
+        if (newDiv) {
+            // Remove the new div if it exists
+            newDiv.remove();
+        }
+    }
+}
+
+// Listen for the scroll event and call the handleScroll function
+window.addEventListener('scroll', handleScroll);
