@@ -2,6 +2,8 @@ https://mordorintelligence1-my.sharepoint.com/:x:/g/personal/mohammad_zulqarnain
 
 https://mordorintelligence1-my.sharepoint.com/:x:/g/personal/mohammad_zulqarnain_mordorintelligence_com/EapsqDYEO0VHnave66JjrmgBZ3rlHDZk1310OG5ibaN8Yw?e=UWhhGO
 
+https://mordorintelligence1-my.sharepoint.com/:x:/g/personal/mohammad_zulqarnain_mordorintelligence_com/ERiK490HpvlPvruWS9N2mA0BxHf3l97YE4ildbLU49XxsQ?e=zgChjd
+
 
  $("p.label:contains('名前')").text("名前名前");
 
