@@ -32,6 +32,7 @@
 
 
 
+
 User Privacy Settings: Users who have opted out of tracking or have strict privacy settings in their browsers may not be tracked accurately in GA4, leading to underreporting.
 Consent Management Tools:
 
