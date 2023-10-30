@@ -1,3 +1,49 @@
+User Privacy Settings: Users who have opted out of tracking or have strict privacy settings in their browsers may not be tracked accurately in GA4, leading to underreporting.
+Consent Management Tools:
+
+Implement a consent management tool that allows users to provide or withdraw consent for tracking. These tools can help you obtain explicit consent for tracking, and they often integrate with GA4 to enable or disable tracking based on user preferences.
+Anonymize IP Addresses:
+
+Configure GA4 to anonymize IP addresses. This will mask the last octet of the IP address, making it more privacy-friendly.
+First-Party Cookies:
+
+Use first-party cookies for tracking. First-party cookies are less likely to be blocked by privacy extensions compared to third-party cookies.
+
+
+
+As of my last knowledge update in January 2022, Google Analytics 4 (GA4) primarily uses first-party cookies for tracking user data. First-party cookies are those set by the website that the user is visiting, and they are generally more privacy-friendly and less likely to be blocked by browsers or privacy extensions.
+
+You can check whether GA4 is using first-party cookies for tracking by inspecting the cookies set by your GA4 implementation in your browser's developer tools. Here's how to do it:
+
+Open the Website: Visit your website where GA4 is implemented.
+
+Open Developer Tools:
+
+In Google Chrome, you can open developer tools by right-clicking on the webpage and selecting "Inspect" or by pressing Ctrl + Shift + I (or Cmd + Option + I on macOS).
+In Mozilla Firefox, you can open developer tools by right-clicking and selecting "Inspect Element" or by pressing Ctrl + Shift + I (or Cmd + Option + I on macOS).
+Navigate to the "Application" Tab:
+
+In Chrome, go to the "Application" tab.
+In Firefox, go to the "Storage" section.
+Check Cookies:
+
+Look for the "Cookies" section within the Application or Storage tab.
+Under "Cookies," you will see a list of cookies associated with your website.
+Inspect GA4 Cookies:
+
+Look for cookies with names related to Google Analytics. These cookies may start with "_ga," "_gid," or "_gat," and you may also see cookies related to your GA4 property ID.
+Check the "Domain" column for these cookies. If they are set to the same domain as your website's domain, they are first-party cookies.
+If the cookies associated with Google Analytics are set to the same domain as your website's domain, then GA4 is using first-party cookies for tracking. This is the typical configuration for GA4 to ensure that the tracking is not impacted by third-party cookie blocking or privacy settings.
+
+However, please note that the use of first-party cookies by GA4 is based on the configuration and implementation of GA4 by the website owner. Google Analytics may evolve over time, so it's essential to stay up to date with any changes in how GA4 handles cookies and user tracking. Additionally, privacy regulations and browser settings may impact cookie behavior, so it's important to monitor these changes and adapt your tracking practices accordingly.
+
+
+
+
+
+
+
+
 https://mordorintelligence1-my.sharepoint.com/:x:/g/personal/mohammad_zulqarnain_mordorintelligence_com/Ea5YHQiESQBFj2rsT3OItpABuYYIxrVewe6W4t3fK1Pxng?e=svaORI
 
 https://mordorintelligence1-my.sharepoint.com/:x:/g/personal/mohammad_zulqarnain_mordorintelligence_com/EdazuLLpRBpBm79-5gFGAqsBasU7pDHVpomicCjlHEFuGg?e=8UjJ0q
