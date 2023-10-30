@@ -1,3 +1,27 @@
+
+function trackCustomizeTocClick(event) {
+    if (event.target.classList.contains('customize-toc')) {
+      // Define the event object with the relevant information
+      var eventData = {
+        event: 'customizeTocClick', // You can use any event name you prefer
+        elementText: event.target.innerText,
+        elementClass: event.target.className,
+        elementId: event.target.id,
+        // Add any other information you want to track
+          
+      };
+console.log(event);
+      // Push the event data to the data layer
+      dataLayer.push(eventData);
+    }
+  }
+
+  // Add a click event listener to the document
+  document.addEventListener('click', trackCustomizeTocClick);
+
+
+
+
 User Privacy Settings: Users who have opted out of tracking or have strict privacy settings in their browsers may not be tracked accurately in GA4, leading to underreporting.
 Consent Management Tools:
 
