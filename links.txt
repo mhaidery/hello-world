@@ -1,16 +1,23 @@
+<script>
+  // Function to push click event data to the data layer
+  function trackCustomizeTocClick(event) {
+    var clickedElement = event.target;
 
-function trackCustomizeTocClick(event) {
-    if (event.target.classList.contains('customize-toc')) {
+    // Check if the clicked element or any of its parents have the "customize-toc" class
+    while (clickedElement && !clickedElement.classList.contains('customize-toc')) {
+      clickedElement = clickedElement.parentElement;
+    }
+
+    if (clickedElement) {
       // Define the event object with the relevant information
       var eventData = {
         event: 'customizeTocClick', // You can use any event name you prefer
-        elementText: event.target.innerText,
-        elementClass: event.target.className,
-        elementId: event.target.id,
+        elementText: clickedElement.innerText,
+        elementClass: clickedElement.className,
+        elementId: clickedElement.id,
         // Add any other information you want to track
-          
       };
-console.log(event);
+
       // Push the event data to the data layer
       dataLayer.push(eventData);
     }
@@ -18,6 +25,8 @@ console.log(event);
 
   // Add a click event listener to the document
   document.addEventListener('click', trackCustomizeTocClick);
+</script>
+
 
 
 
