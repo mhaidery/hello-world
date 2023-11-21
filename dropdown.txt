@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectable Dropdown with Multiple Items</title>
+</head>
+<body>
+
+    <div class="company-page-ul" style="margin: 0px -40px">
+        <ul style="list-style-type: disc; margin: 0px 20px 10px">
+            <ul style="list-style-type: disc; margin: 0px 20px 10px"></ul>
+            <ul style="list-style-type: disc; margin: 0px 20px 10px">
+                <ul style="list-style-type: disc; margin: 0px 20px 10px"></ul>
+            </ul>
+            <ul style="list-style-type: disc; margin: 0px 20px 10px">
+                <ul style="list-style-type: disc; margin: 0px 20px 10px"></ul>
+                <ul style="list-style-type: disc; margin: 0px 20px 10px">
+                    <ul style="list-style-type: disc; margin: 0px 20px 10px"></ul>
+                </ul>
+                <ul style="list-style-type: disc; margin: 0px 20px 10px">
+                    <ul style="list-style-type: disc; margin: 0px 20px 10px"></ul>
+                    <ul style="list-style-type: disc; margin: 0px 20px 10px">
+                        <ul style="list-style-type: disc; margin: 0px 20px 10px"></ul>
+                    </ul>
+                    <ul style="list-style-type: disc; margin: 0px 20px 10px">
+                        <ul style="list-style-type: disc; margin: 0px 20px 10px"></ul>
+                        <ul style="list-style-type: disc; margin: 0px 20px 10px"></ul>
+                        <ul style="list-style-type: disc; margin: 0px 20px 10px"></ul>
+                        <ul style="list-style-type: disc; margin: 0px 20px 10px"></ul>
+                        <ul style="list-style-type: disc; margin: 0px 20px 10px"></ul>
+                    </ul>
+                </ul>
+            </ul>
+            <ul style="list-style-type: disc; margin: 0px 20px 10px">
+                <ul style="list-style-type: disc; margin: 0px 20px 10px">
+                    <li style="margin: 10px 0px 0px">
+                        <p>The Kraft Heinz Company</p>
+                    </li>
+                    <li style="margin: 10px 0px 0px">
+                        <p>Starbucks Coffee Company</p>
+                    </li>
+                    <li style="margin: 10px 0px 0px">
+                        <p>The J. M. Smucker Company</p>
+                    </li>
+                    <li style="margin: 10px 0px 0px">
+                        <p>Luigi Lavazza SPA</p>
+                    </li>
+                    <li style="margin: 10px 0px 0px">
+                        <p>Nestle SA</p>
+                    </li>
+                    <li style="margin: 10px 0px 0px">
+                        <p>The Coca-Cola Company</p>
+                    </li>
+                    <li style="margin: 10px 0px 0px">
+                        <p>JAB Holding Company</p>
+                    </li>
+                    <li style="margin: 10px 0px 0px">
+                        <p>Tata Global Beverages</p>
+                    </li>
+                    <li style="margin: 10px 0px 0px">
+                        <p>Tchibo GmbH</p>
+                    </li>
+                    <li style="margin: 10px 0px 0px">
+                        <p>Strauss Group Ltd</p>
+                    </li>
+                </ul>
+            </ul>
+        </ul>
+    </div>
+
+    <label for="companyDropdown">Select Companies:</label>
+    <select id="companyDropdown" multiple></select>
+
+    <script>
+        // Get all <li> elements within the specified div
+        var listItems = document.querySelectorAll('.company-page-ul li');
+
+        // Create a dropdown with multiple selection and add each <li> text content as an option
+        var dropdown = document.getElementById('companyDropdown');
+        listItems.forEach(function (item) {
+            var option = document.createElement('option');
+            option.text = item.textContent.trim();
+            dropdown.add(option);
+        });
+    </script>
+
+</body>
+</html>
