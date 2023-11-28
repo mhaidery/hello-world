@@ -19,27 +19,27 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-form > .step {
+#multi-step-form > .step {
     display: none;
 }
 
-form > .step-1 {
+#multi-step-form > .step-1 {
     display: block;
 }
 
-form > .step > label {
+#multi-step-form > .step > label {
     font-weight: bold;
 }
 
-form > .step > input,
-form > .step > select,
-form > .step > textarea {
+#multi-step-form > .step > input,
+#multi-step-form > .step > select,
+#multi-step-form > .step > textarea {
     width: 100%;
     margin: 10px 0;
     padding: 10px;
 }
 
-button {
+.next-step, .prev-step {
     margin: 10px 5px;
     padding: 10px 20px;
     border: none;
@@ -57,7 +57,7 @@ h2 {
 </head>
 <body>
     <div class="form-container">
-        <form id="multi-step-form">
+        <div id="multi-step-form">
             <div class="step step-1">
                 <label for="email">Step 1: Email</label>
                 <input type="email" id="email" required>
@@ -102,7 +102,7 @@ h2 {
             <div class="step step-5">
                 <h2>Thank you for submitting the form!</h2>
             </div>
-        </form>
+        </div>
     </div>
 
     <script>
