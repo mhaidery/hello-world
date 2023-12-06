@@ -1,0 +1,47 @@
+.hover_bkgr_fricc{background:rgba(0,0,0,.4);cursor:pointer;display:none;height:100%;position:fixed;text-align:center;top:0;width:100%; z-index:9999;}
+.hover_bkgr_fricc .helper{display:inline-block;height:100%;vertical-align:middle; z-index: 1000;}
+/*.hover_bkgr_fricc_inner {background-color: #FFF;display: inline-block;max-width: 432px;min-height: 100px;vertical-align: middle;width: 60%;position: relative;border-radius: 8px;background-image: url(https://g.factoryoutletstore.com/content/images/fos/abt/all/exit_intent_popup2.png?v=2);height: 300px;z-index: 10000;background-repeat: no-repeat;}*/
+.hover_bkgr_fricc_inner {background-color: transparent;display: inline-block;max-width: 500px;min-height: 100px;vertical-align: middle;width: 60%;position: relative;border-radius: 8px;background-image: url(https://fosimg.factoryoutletstore.com/content/emailer/fos/coupon_code_ng.jpg);height: 320px;z-index: 10000;background-repeat: no-repeat;}
+.popupCloseButton {cursor: pointer;display: inline-block;font-family: arial;font-weight: bold;position: absolute;top: -6px;right: 1px;font-size: 14px;line-height: 30px;width: 28px;color: #FFF;background-color: #000;border-radius: 29px;}
+.popupCloseButton:hover {color: #ccc;}
+/*.cta_btn {width: 433px;text-align: center;margin: 0 auto;height: auto;margin-top: 217px;padding: 15px 2px;font-size: 16px;font-weight: bold;border-radius: 5px;background-image: url(/content/images/fos/abt/all/popup_min_cart_val_email_btn.png);height: 47px;background-repeat: no-repeat;margin-left: 79px;}*/
+.cta_btn {width: 433px;text-align: center;margin: 0 auto;height: auto;margin-top: 52px;padding: 15px 2px;font-size: 16px;font-weight: bold;border-radius: 5px;background-image: url(https://fosimg.com/content/images/fos/abt/all/popup_min_cart_val_email_btn2.png);height: 47px;background-repeat: no-repeat;margin-left: 117px;}
+.pop-txt {font-size: 22px;font-family: arial;margin: 88px 0 8px 13px;width: 400px;height: 109px;padding-bottom: 0;line-height: 35px;color: #4c4747;font-weight: normal;line-height: 44px;}
+.pop-txt span {font-weight: bold;color: #008703;}
+.pop-txt-prod {display: inline-block;font-weight: bold;/* font-style: italic; */line-height: 39px;font-size: 22px;margin-top: 15px;}
+.pop-txt-off { display: inline-block; color: green;}
+
+
+
+var div = document.createElement('div');
+      div.innerHTML = '<div class="hover_bkgr_fricc"><span class="helper"></span><div class="hover_bkgr_fricc_inner"><div class="popupCloseButton">X</div><div class="pop-txt"><div class="pop-txt-prod"></div> <div class="pop-txt-off"></div></div><a href="https://online.factoryoutletstore.com/nav/expressCart/1?coupon=FOS5OFF"><div class="cta_btn"></div></a></div></div>';
+      document.body.appendChild(div);
+      var element = document.querySelector('.hover_bkgr_fricc');
+     
+      if ((document.cookie.indexOf("popupShowed") < 0)){     
+             var isPopupShowed = 0;
+            if (isPopupShowed == 0) {
+                element.style.display = "block";
+                isPopupShowed = 1;
+                document.cookie="popupShowed=1";
+            }
+            const ctaEle=document.querySelector('.cta_btn');
+            ctaEle.addEventListener("click",function(){
+                element.style.display = "none";
+            });
+            const popupCloseButtonEle=document.querySelector('.popupCloseButton');
+            popupCloseButtonEle.addEventListener("click",function(){
+                element.style.display = "none";
+            });
+        }
+        else {
+            element.style.display = "none";
+        }
+// Find the div element with the specified class
+const divElement = document.querySelector('.css-14kveuv');
+// Create a new anchor tag
+const anchorTag = document.createElement('a');
+anchorTag.href = 'https://www.factoryoutletstore.com/p/july-4th';
+// Wrap the div element with the anchor tag
+divElement.parentNode.insertBefore(anchorTag, divElement);
+anchorTag.appendChild(divElement);
